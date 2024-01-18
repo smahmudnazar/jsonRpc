@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/payway
+    username: postgres
+    password: 1227
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        format_sql: false
+  sql:
+    init:
+      mode: always
+      platform: postgresql
+  main:
+    lazy-initialization: true
+  application:
+    name: j-sso
